@@ -1,0 +1,28 @@
+// Resets
+@use "variables";
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+	@font-face {
+		font-family: "Eudoxus";
+		src: url(./assets/fonts/Eudoxus-Sans-font/Eudoxus-Sans-font/Variable/EudoxusSansGX.ttf)
+				format("truetype"),
+			url(./assets/fonts/Eudoxus-Sans-font/Eudoxus-Sans-font/Variable/EudoxusSansGX.woff)
+				format("woff"),
+			url(./assets/fonts/Eudoxus-Sans-font/Eudoxus-Sans-font/Variable/EudoxusSansGX.woff2)
+				format("woff2");
+	}
+	font-family: "Eudoxus", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
