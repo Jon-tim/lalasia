@@ -1,0 +1,16 @@
+.menu-links {
+	display: none;
+	height: 70px;
+	ul {
+		height: 100%;
+	}
+	@media screen and (min-width: 768px) {
+		display: block;
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem;
+		}
+	}
+}
