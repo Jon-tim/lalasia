@@ -1,3 +1,4 @@
+@use "/src/styles/variables";
 .menuitem {
 	list-style: none;
 	height: 100%;
@@ -6,7 +7,33 @@
 	justify-content: center;
 
 	a {
-		// height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
 		text-transform: capitalize;
+		position: relative;
+		&:hover p {
+			transition: variables.$three;
+			color: variables.$primaryColour;
+		}
+		&.active p{
+			color: variables.$primaryColour;
+		}
+		p {
+			color: variables.$textColour;
+		}
+		&.active p::after {
+			content: "";
+			transition: variables.$three;
+			position: absolute;
+			background-color: variables.$primaryColour;
+			width: 100%;
+			height: 4px;
+			bottom: 0px;
+			left: 0px;
+			border-top-left-radius: 100px;
+			border-top-right-radius: 100px;
+		}
 	}
 }
