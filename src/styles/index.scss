@@ -1,6 +1,10 @@
 // Resets
 @use "variables";
 
+body {
+	background-color: variables.$placeholderColour;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0px;
@@ -12,11 +16,11 @@
 	}
 	@font-face {
 		font-family: "Eudoxus";
-		src: url(./assets/fonts/Eudoxus-Sans-font/Eudoxus-Sans-font/Variable/EudoxusSansGX.ttf)
+		src: url(/src/assets/fonts/Eudoxus-Sans-font/Eudoxus-Sans-font/Variable/EudoxusSansGX.ttf)
 				format("truetype"),
-			url(./assets/fonts/Eudoxus-Sans-font/Eudoxus-Sans-font/Variable/EudoxusSansGX.woff)
+			url(/src/assets/fonts/Eudoxus-Sans-font/Eudoxus-Sans-font/Variable/EudoxusSansGX.woff)
 				format("woff"),
-			url(./assets/fonts/Eudoxus-Sans-font/Eudoxus-Sans-font/Variable/EudoxusSansGX.woff2)
+			url(/src/assets/fonts/Eudoxus-Sans-font/Eudoxus-Sans-font/Variable/EudoxusSansGX.woff2)
 				format("woff2");
 	}
 	font-family: "Eudoxus", sans-serif;

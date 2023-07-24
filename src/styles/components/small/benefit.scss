@@ -1,0 +1,40 @@
+@use "../../variables";
+@import "../../mixins";
+
+.benefit_contain {
+	background-color: #fff;
+	padding: 1rem;
+	@include center-column;
+	align-items: start;
+	gap: 0.8rem;
+	.icon {
+		padding: 0.7rem;
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		background-color: variables.$placeholderColour;
+		img {
+			width: 100%;
+		}
+	}
+	h3 {
+		color: variables.$textColour;
+		font-size: 1rem;
+	}
+	p {
+		line-height: 1.5;
+		font-size: 0.8rem;
+		color: variables.$paragraphColour;
+	}
+
+	@media screen and (min-width: 375px) {
+		padding: 1.5rem;
+		h3 {
+			font-size: 1.125rem;
+		}
+		p {
+			line-height: 1.6;
+			font-size: 1rem;
+		}
+	}
+}

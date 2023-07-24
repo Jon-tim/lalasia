@@ -1,0 +1,112 @@
+@use "../../../variables";
+@import "/src/styles/mixins";
+
+section {
+	margin: 2rem 0rem;
+	.contain {
+		@include center-column;
+		gap: 1.5rem;
+		padding: 1rem;
+		max-width: 1200px;
+		margin: 0 auto;
+		img {
+			width: 100%;
+		}
+		.hero_text {
+			@include center-column;
+			gap: 1rem;
+			text-align: center;
+
+			header {
+				h1 {
+					position: relative;
+					font-size: 1.5rem;
+					line-height: 1.5;
+					text-transform: capitalize;
+					&::after {
+						content: url("/src/assets/icons/stars.svg");
+						position: absolute;
+						top: 40%;
+						@media screen and (min-width: 768px) {
+							// width: 60px;
+							// height: 60px;
+							// view-box:;
+						}
+					}
+				}
+			}
+			p {
+				margin-bottom: 0.5rem;
+				font-size: 0.8rem;
+				line-height: 1.5;
+				color: variables.$paragraphColour;
+			}
+
+			.search_contain {
+				width: 100%;
+				background-color: #fff;
+				padding: 1rem;
+				@include center-row;
+				justify-content: space-between;
+
+				.search {
+					@include center-row;
+
+					svg {
+						stroke: variables.$paragraphColour;
+					}
+
+					input {
+						height: 45px;
+						width: 80%;
+						padding-left: 0.5rem;
+						outline: none;
+						border: none;
+						color: variables.$textColour;
+						font-size: 0.85rem;
+						&::placeholder {
+							font-size: 0.8rem;
+							font-weight: 500;
+							text-transform: capitalize;
+							color: variables.$paragraphColour;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 375px) {
+		.contain {
+			.hero_text {
+				p {
+					font-size: 1rem;
+				}
+				header {
+					h1 {
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 768px) {
+		.contain {
+			.hero_text {
+				max-width: 620px;
+				p {
+					font-size: 1.125rem;
+				}
+				header {
+					h1 {
+						font-size: 3.25rem;
+					}
+				}
+			}
+		}
+		.img_holder {
+			position: relative;
+			z-index: -1;
+			transform: translateY(-13%);
+		}
+	}
+}

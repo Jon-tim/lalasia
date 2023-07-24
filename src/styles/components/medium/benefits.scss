@@ -1,0 +1,77 @@
+@use "../../variables";
+@import "../../mixins";
+
+.benefits_contain {
+	padding-inline: 1rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	align-items: start;
+	gap: 1.5rem;
+
+	@include center-column;
+	.benefits_header {
+		@include center-column;
+		align-items: start;
+		gap: 1rem;
+		header {
+			p {
+				color: variables.$secondaryColour;
+				font-weight: 600;
+				margin-bottom: 5px;
+			}
+			h1 {
+				font-size: 1.25rem;
+				color: variables.$textColour;
+			}
+		}
+		> p {
+			font-size: 0.8rem;
+			color: variables.$paragraphColour;
+			line-height: 1.5;
+		}
+	}
+	.benefits_body {
+		@include center-column;
+		gap: 1rem;
+	}
+	@media screen and (min-width: 375px) {
+		.benefits_header {
+			header {
+				p {
+					margin-bottom: 5px;
+				}
+				h1 {
+					font-size: 2rem;
+				}
+			}
+			> p {
+				font-size: 1rem;
+				line-height: 1.6;
+			}
+		}
+	}
+	@media screen and (min-width: 768px) {
+		.benefits_header {
+			@include center-row;
+			align-items: end;
+			justify-content: space-between;
+			header {
+				p {
+					margin-bottom: 5px;
+				}
+				h1 {
+					font-size: 2.5rem;
+				}
+			}
+			> p {
+				width: 40%;
+			}
+		}
+
+		.benefits_body {
+			@include center-row;
+			// gap: 1rem;
+		}
+	}
+}

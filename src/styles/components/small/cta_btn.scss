@@ -1,0 +1,12 @@
+@use "/src/styles/variables";
+button {
+	font-family: inherit;
+	color: white;
+	border: none;
+	outline: none;
+	text-transform: capitalize;
+	font-weight: 600;
+	font-size: 1rem;
+	background-color: variables.$primaryColour;
+	padding: .8rem 2rem;
+}
