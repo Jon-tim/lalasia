@@ -7,8 +7,8 @@ section {
 		@include center-column;
 		gap: 1.5rem;
 		padding: 1rem;
-		max-width: 1200px;
-		margin: 0 auto;
+		@include max-width;
+
 		img {
 			width: 100%;
 		}

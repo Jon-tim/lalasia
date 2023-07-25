@@ -1,0 +1,25 @@
+@import "../../mixins";
+
+.discount_cta {
+	padding: 1rem;
+	@include max-width;
+	@include center-column;
+	align-items: start;
+	gap: 1rem;
+
+	h1 {
+		font-size: 1.25rem;
+		@media screen and (min-width: 768px) {
+			font-size: 1.8rem;
+		}
+		@media screen and (min-width: 900px) {
+			font-size: 2.2rem;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		padding-inline: 2rem;
+		@include center-row;
+		justify-content: space-between;
+	}
+}

@@ -2,9 +2,8 @@
 @import "../../mixins";
 
 .our_products {
+	@include max-width;
 	padding-inline: 1rem;
-	max-width: 1200px;
-	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto 250px 250px;
@@ -37,6 +36,8 @@
 
 			p {
 				text-transform: capitalize;
+				font-size: 0.8rem;
+				color: variables.$paragraphColour;
 			}
 		}
 	}

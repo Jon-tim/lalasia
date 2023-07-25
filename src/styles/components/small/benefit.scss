@@ -2,6 +2,7 @@
 @import "../../mixins";
 
 .benefit_contain {
+	flex: 1;
 	background-color: #fff;
 	padding: 1rem;
 	@include center-column;

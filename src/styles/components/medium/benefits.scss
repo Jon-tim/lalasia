@@ -3,8 +3,7 @@
 
 .benefits_contain {
 	padding-inline: 1rem;
-	max-width: 1200px;
-	margin: 0 auto;
+	@include max-width;
 	margin-bottom: 2rem;
 	align-items: start;
 	gap: 1.5rem;

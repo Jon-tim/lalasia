@@ -1,0 +1,21 @@
+@use "../../variables";
+@import "../../mixins";
+
+footer {
+	@include max-width;
+	padding-inline: 1rem;
+	section {
+		padding-block: 1rem;
+		border-top: 1px solid variables.$paragraphColour;
+		@include center-column;
+
+		p {
+			text-align: center;
+			color: variables.$paragraphColour;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		padding-inline: 2rem;
+	}
+}

@@ -10,7 +10,7 @@
 		color: variables.$textColour;
 	}
 }
-p {
+.details {
 	font-size: 0.8rem;
 	color: variables.$paragraphColour;
 	line-height: 1.5;
@@ -36,11 +36,16 @@ p {
 		p {
 			margin-bottom: 5px;
 		}
-		h1 {
-			font-size: 1.8rem;
-		}
 	}
 	.details {
 		width: 40%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.header {
+		h1 {
+			font-size: 2.2rem;
+		}
 	}
 }

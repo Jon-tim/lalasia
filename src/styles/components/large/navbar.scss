@@ -1,13 +1,13 @@
+@import "../../mixins";
 nav {
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
 	.contain {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin: 0 auto;
-		max-width: 1200px;
-		padding: 0rem .5rem;
-		@media screen and (min-width:375px) {
+		@include max-width;
+		padding: 0rem 0.5rem;
+		@media screen and (min-width: 375px) {
 			padding: 0rem 1rem;
 		}
 	}
