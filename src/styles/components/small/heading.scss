@@ -1,0 +1,46 @@
+@use "../../variables";
+.header {
+	> p {
+		color: variables.$secondaryColour;
+		font-weight: 600;
+		margin-bottom: 5px;
+	}
+	h1 {
+		font-size: 1.25rem;
+		color: variables.$textColour;
+	}
+}
+p {
+	font-size: 0.8rem;
+	color: variables.$paragraphColour;
+	line-height: 1.5;
+}
+
+@media screen and (min-width: 375px) {
+	.header {
+		> p {
+			margin-bottom: 5px;
+		}
+		h1 {
+			font-size: 1.8rem;
+		}
+	}
+	.details {
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		p {
+			margin-bottom: 5px;
+		}
+		h1 {
+			font-size: 1.8rem;
+		}
+	}
+	.details {
+		width: 40%;
+	}
+}
