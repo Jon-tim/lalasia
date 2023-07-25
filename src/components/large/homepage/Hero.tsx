@@ -1,25 +1,39 @@
 import "../../../styles/components/large/hero/hero.scss";
 import CTA_btn from "../../small/CTA_btn";
 import hero from "../../../assets/images/hero.jpg";
+import { motion } from "framer-motion";
 
 export default function Hero() {
 	return (
 		<section>
 			<div className="contain">
 				<div className="hero_text">
-					<header>
+					<motion.header
+						initial={{ opacity: 0, translateY: -30 }}
+						animate={{ opacity: 1, translateY: 0 }}
+						transition={{ duration: 1 }}
+					>
 						<h1>
 							discover furniture with <br /> high quality wood
 						</h1>
-					</header>
-					<p>
+					</motion.header>
+					<motion.p
+						initial={{ opacity: 0, translateY: -30 }}
+						animate={{ opacity: 1, translateY: 0 }}
+						transition={{ duration: 1, delay: 0.5 }}
+					>
 						We offer a wide range of furniture made from high
 						quality wood, sourced from sustainable forests and
 						crafted with care. Browse our collection and find your
 						perfect match today.
-					</p>
+					</motion.p>
 
-					<div className="search_contain">
+					<motion.div
+						initial={{ opacity: 0, translateY: 20 }}
+						animate={{ opacity: 1, translateY: 0 }}
+						transition={{ duration: 1, delay: 0.7 }}
+						className="search_contain"
+					>
 						<div className="search">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -43,14 +57,19 @@ export default function Hero() {
 							/>
 						</div>
 						<CTA_btn>search</CTA_btn>
-					</div>
+					</motion.div>
 				</div>
-				<div className="img_holder">
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1, delay: 0.8 }}
+					className="img_holder"
+				>
 					<img
 						src={hero}
 						alt=""
 					/>
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	);

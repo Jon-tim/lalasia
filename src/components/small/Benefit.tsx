@@ -1,4 +1,5 @@
 import "../../styles/components/small/benefit.scss";
+import { motion } from "framer-motion";
 
 type props = {
 	src: string;
@@ -6,9 +7,17 @@ type props = {
 	description: string;
 };
 
+const item = {
+	hidden: { opacity: 0 },
+	show: { opacity: 1 },
+};
+
 export default function Benefit({ src, title, description }: props) {
 	return (
-		<div className="benefit_contain">
+		<motion.div
+			variants={item}
+			className="benefit_contain"
+		>
 			<div className="icon">
 				<img
 					src={src}
@@ -17,6 +26,6 @@ export default function Benefit({ src, title, description }: props) {
 			</div>
 			<h3>{title}</h3>
 			<p>{description}</p>
-		</div>
+		</motion.div>
 	);
 }

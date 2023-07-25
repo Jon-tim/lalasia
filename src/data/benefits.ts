@@ -11,7 +11,7 @@ export const benefits = [
 		src: "/src/assets/icons/3square.svg",
 		title: "Many Choices",
 		description:
-			"Explore an extensive range of high-quality wood furniture, catering to diverse tastes.",
+			"Explore an extensive range of high-quality wood furniture, catering to diverse tastes and needs.",
 	},
 	{
 		id: 3,
