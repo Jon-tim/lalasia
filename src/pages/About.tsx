@@ -1,9 +1,8 @@
-import Navbar from "../components/large/Navbar";
 
 export default function About() {
 	return (
 		<>
-			<Navbar />
+		<h1>hi</h1>
 		</>
 	);
 }

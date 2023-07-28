@@ -1,0 +1,11 @@
+.products_page {
+	.products_page_img_holder {
+		margin: 2.5rem 0rem;
+		max-height: 400px;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@use "../../variables";
+@import "../../mixins";
+
+.page_header {
+	// margin: 2.5rem 0rem 2rem;
+	padding-inline: 1rem;
+	@include center-column;
+	@include max-width;
+	margin-top: 2.5rem;
+	gap: 1rem;
+	text-align: center;
+
+	h1 {
+		font-size: 1.8rem;
+	}
+
+	p {
+		max-width: 500px;
+		color: variables.$paragraphColour;
+	}
+	@media screen and (min-width: 768px) {
+		margin-top: 5rem;
+		margin-bottom: 3rem;
+		h1 {
+			font-size: 3rem;
+		}
+	}
+}

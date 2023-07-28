@@ -1,0 +1,48 @@
+@use "../../variables";
+@import "../../mixins";
+
+.product-card {
+	width: 100%;
+	max-width: 325px;
+	// flex: 1 1 minmax(180px, 300px);
+	.product-image {
+		img {
+			width: 100%;
+		}
+	}
+	.product-info {
+		@include center-column;
+		align-items: start;
+		gap: 0.3rem;
+
+		.product-category {
+			font-size: 0.85rem;
+			margin-top: 0.5rem;
+			font-weight: 600;
+			color: variables.$paragraphColour;
+			text-transform: capitalize;
+		}
+		.product-name {
+			text-transform: capitalize;
+			font-size: 1.15rem;
+			color: variables.$primaryColour;
+		}
+		.product-description {
+			color: variables.$paragraphColour;
+		}
+		.product-price {
+			font-weight: 700;
+
+		}
+	}
+
+	@media screen and (min-width: 375px) {
+		max-width: 350px;
+	}
+	@media screen and (min-width: 768px) {
+		max-width: 325px;
+	}
+	@media screen and (min-width: 1024px) {
+		max-width: 350px;
+	}
+}

@@ -4,10 +4,14 @@ import Products from "./pages/Products";
 import Services from "./pages/Services";
 import Articles from "./pages/Articles";
 import About from "./pages/About";
+import Navbar from "./components/large/Navbar";
+import Footer from "./components/large/Footer";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
 	return (
 		<BrowserRouter>
+			<Navbar />
 			<Routes>
 				<Route
 					path="/"
@@ -16,6 +20,10 @@ function App() {
 				<Route
 					path="/products"
 					element={<Products />}
+				/>
+				<Route
+					path="/products/:id"
+					element={<SingleProduct />}
 				/>
 				<Route
 					path="/about"
@@ -30,6 +38,7 @@ function App() {
 					element={<Articles />}
 				/>
 			</Routes>
+			<Footer />
 		</BrowserRouter>
 	);
 }
